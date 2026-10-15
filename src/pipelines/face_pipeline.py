@@ -47,7 +47,7 @@ def get_face_embeddings(image_np):
             image_np,
             shape,
             3
-        )
+        ) #128 embedding
 
         encodings.append(
             np.array(face_descriptor, dtype=np.float32)
@@ -72,8 +72,8 @@ def get_trained_model():
         student_id = student.get("student_id")
 
         if embedding is not None and student_id is not None:
-            X.append(embedding)
-            y.append(student_id)
+            X.append(np.array(embedding))
+            y.append(student.get('student_id'))
 
     if len(X) == 0:
         return None

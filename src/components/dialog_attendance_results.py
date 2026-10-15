@@ -7,7 +7,7 @@ def show_attendance_results(df,logs):
     st.dataframe(df, hide_index=True, width='stretch')
 
     col1, col2 = st.columns(2)
-
+  
     with col1:
         if st.button('Discard', width='stretch'):
             st.session_state.voice_attendance_results = None

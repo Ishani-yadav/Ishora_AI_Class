@@ -7,7 +7,7 @@ from src.components.dialog_auto_enroll import auto_enroll_dialog
 
 def main():
     st.set_page_config(
-        page_title= "SnapShot Class - Making Attendance Faster.",
+        page_title= "SmartAttend - Making Attendance Faster.",
         page_icon= "https://imgs.search.brave.com/nn0vWgrqwbB-BFhhb1Uh45KDTNuepnm9N_M8KivT5Gc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtdmVjdG9y/L3ZlY3Rvci12aW50/YWdlLWNhbWVyYV81/Mzg3Ni0zNjY4MC5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA"
     )
 

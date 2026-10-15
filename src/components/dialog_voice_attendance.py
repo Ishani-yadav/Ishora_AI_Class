@@ -1,7 +1,7 @@
 import streamlit as st
 from src.pipelines.voice_pipeline import process_bulk_audio
 from src.database.config import supabase
-from src.components.dialog_attendance_record import show_attendance_results
+from src.components.dialog_attendance_results import show_attendance_results
 
 from datetime import datetime
 
@@ -17,7 +17,7 @@ def voice_attendance_dialog(selected_subject_id):
 
     if st.button("Analyze Audio",width='stretch',type='primary', disabled=audio_data is None):
         with st.spinner("Processing Audio Data"):
-            enrolled_res = supabase.table('subject_students').select("*, students(*)").eq('subject_id',selected_subject_id).execute()
+            enrolled_res = supabase.table('subjects_students').select("*, students(*)").eq('subject_id',selected_subject_id).execute()
             enrolled_students = enrolled_res.data
 
             if not enrolled_students:

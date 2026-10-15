@@ -1,4 +1,7 @@
 import streamlit as st
+import segno
+import io
+
 from src.database.db import create_subject
 
 @st.dialog("Create New Subject")
